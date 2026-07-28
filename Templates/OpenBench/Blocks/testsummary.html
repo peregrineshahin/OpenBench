@@ -9,6 +9,7 @@
 <td class="textcenter"><a href="{{test|gitDiffLink}}">diff</a></td>
 <td>
     {{test.dev_time_control}}
+    <span class="textcenter">th={{test|devThreads}}</span>
     {% if test|test_is_time_odds %} <span style="color: yellow; cursor: pointer" title="Time odds">*</span> {% endif %}
     {% if test|test_is_smp_odds %} <span style="color: orange; cursor: pointer" title="Thread odds">*</span> {% endif %}
 </td>

@@ -283,6 +283,9 @@ def test_is_time_odds(test):
 def test_is_fischer(test):
     return 'FRC' in test.book_name.upper() or '960' in test.book_name.upper()
 
+def devThreads(test):
+    return OpenBench.utils.extract_option(test.dev_options, 'Threads')
+
 register.filter('book_download_link', book_download_link)
 register.filter('network_download_link', network_download_link)
 
@@ -294,6 +297,7 @@ register.filter('git_diff_text', git_diff_text)
 register.filter('test_is_smp_odds'  , test_is_smp_odds  )
 register.filter('test_is_time_odds' , test_is_time_odds )
 register.filter('test_is_fischer'   , test_is_fischer   )
+register.filter('devThreads'        , devThreads        )
 
 
 @register.filter
